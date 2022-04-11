@@ -7,7 +7,7 @@ import socket
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Replace 'IP' with EC2 Public IP address
-client.connect(('IP', 1256))
+client.connect(('IP', 1325))
 
 file = open('apple.jpg', 'rb')
 image_data = file.read(4096)
