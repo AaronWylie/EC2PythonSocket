@@ -1,13 +1,13 @@
 import socket
 
 # You run this second
-# This will go on Jetson Nano
+# This will go on Jetson Nano (Or any local device)
 
 # AF_INET = IPv4, SOCK_STREAM = TCP
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# ec2 public ip --> 18.188.146.161
-client.connect(('18.188.146.161', 1256))
+# Replace 'IP' with EC2 Public IP address
+client.connect(('IP', 1256))
 
 file = open('apple.jpg', 'rb')
 image_data = file.read(4096)
