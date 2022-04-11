@@ -4,10 +4,9 @@ import socket
 # this will go on EC2 server
 # AF_INET = IP, SOCK_STREAM = TCP
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-# ip , port
 
-# Ip (of jetson nano), port
-server.bind(('100.64.14.106', 1325))
+# replace'IP' with EC2 Private IP
+server.bind(('IP', 1325)) 
 server.listen()
 
 client_socket, client_address = server.accept()
